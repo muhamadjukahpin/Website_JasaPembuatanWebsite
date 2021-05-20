@@ -1,0 +1,177 @@
+body {
+    margin-top: 30px;
+}
+
+.navbar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar>.container>.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.navbar>.container>.navbar-collapse>.navbar-nav {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.navbar>.container>.navbar-collapse>.navbar-nav>.nav-item>.nav-link.active {
+    color: #00B0FF !important;
+}
+
+
+.banner {
+    background-color: #00B0FF;
+}
+
+.mt-banner {
+    margin-top: 100px;
+}
+
+.judul-banner {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.isi-banner {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+
+}
+
+.order,
+.contact {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.order {
+    background-color: #C5EDFF;
+}
+
+.contact {
+    background-color: #D4D4D4;
+}
+
+.judul-content,
+.judul-about-us,
+.judul-contact-us {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.isi-content {
+    font-family: 'Montsserat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #B4B1B1;
+}
+
+.isi-content>p {
+    display: inline;
+}
+
+.btn-sm {
+    width: 30px;
+    height: 30px;
+}
+
+
+.isi-content>p>strong {
+    color: #00B0FF;
+    font-weight: 600;
+}
+
+.icon-check {
+    color: #32A157;
+}
+
+.mt-get {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.about-us {
+    background-color: #F3F3F3;
+    height: 486px;
+}
+
+.visi>p,
+.misi>p {
+    display: inline;
+}
+
+.isi-about-us {
+    font-family: 'Montsserat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #B4B1B1;
+}
+
+.contact-us {
+    margin-top: 68px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.btn-send {
+    width: 152px;
+    height: 42px;
+}
+
+.isi-contact-us {
+    font-family: 'Montsserat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #B4B1B1;
+}
+
+
+.nama-wa {
+    font-family: 'Montsserat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #B4B1B1;
+}
+
+.footer {
+    font-family: 'Montsserat', sans-serif;
+    font-weight: 400;
+    color: #B4B1B1;
+    background-color: #F3F3F3;
+    margin-top: 113px;
+    height: 113px;
+}
+
+.footer p {
+    margin-top: 53px;
+}
+
+@media(min-width: 491px) {
+    .contact-us {
+        margin-top: -84px;
+    }
+}
+
+@media (min-width: 769px) {
+    .contact-us {
+        margin-top: -100px;
+    }
+}
+
+@media(min-width: 989px) {
+    .contact-us {
+        margin-top: -154px;
+    }
+}
+
+/* sweet alert */
+.swal-footer {
+    text-align: center !important;
+}
