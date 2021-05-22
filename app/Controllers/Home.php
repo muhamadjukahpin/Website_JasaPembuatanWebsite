@@ -58,25 +58,33 @@ class Home extends BaseController
 			return redirect()->to('/home/index#contact-us')->withInput();
 		}
 
-		$email = \Config\Services::email();
-		$email->setFrom('merhkolor@gmail.com', 'Pelanggan');
-		$email->setTo('muhamadjukahpin@gmail.com');
-		$email->setSubject('Order Website');
-		$email->setMessage('Email : ' . htmlspecialchars($this->request->getPost('email')) .
-			'<br> Nama : ' . htmlspecialchars($this->request->getPost('name')) .
-			'<br> Pesan : ' . htmlspecialchars($this->request->getPost('message')));
-		if (!$email->send()) {
-			session()->setFlashdata('message', 'failed-send');
-			return redirect()->to('/');
-		} else {
-			$this->HomeModel->save([
-				'name' => htmlspecialchars($this->request->getPost('name')),
-				'email' => htmlspecialchars($this->request->getPost('email')),
-				'message' => htmlspecialchars($this->request->getPost('message'))
-			]);
-			session()->setFlashdata('message', 'success-send');
-			return redirect()->to('/');
-		}
+		$this->HomeModel->save([
+			'name' => htmlspecialchars($this->request->getPost('name')),
+			'email' => htmlspecialchars($this->request->getPost('email')),
+			'message' => htmlspecialchars($this->request->getPost('message'))
+		]);
+		session()->setFlashdata('message', 'success-send');
+		return redirect()->to('/');
+
+		// $email = \Config\Services::email();
+		// $email->setFrom('merhkolor@gmail.com', 'Pelanggan');
+		// $email->setTo('muhamadjukahpin@gmail.com');
+		// $email->setSubject('Order Website');
+		// $email->setMessage('Email : ' . htmlspecialchars($this->request->getPost('email')) .
+		// 	'<br> Nama : ' . htmlspecialchars($this->request->getPost('name')) .
+		// 	'<br> Pesan : ' . htmlspecialchars($this->request->getPost('message')));
+		// if (!$email->send()) {
+		// 	session()->setFlashdata('message', 'failed-send');
+		// 	return redirect()->to('/');
+		// } else {
+		// 	$this->HomeModel->save([
+		// 		'name' => htmlspecialchars($this->request->getPost('name')),
+		// 		'email' => htmlspecialchars($this->request->getPost('email')),
+		// 		'message' => htmlspecialchars($this->request->getPost('message'))
+		// 	]);
+		// 	session()->setFlashdata('message', 'success-send');
+		// 	return redirect()->to('/');
+		// }
 	}
 
 	//--------------------------------------------------------------------

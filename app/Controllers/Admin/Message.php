@@ -17,7 +17,7 @@ class Message extends BaseController
     public function index()
     {
         $data['title'] = 'Message';
-        $data['messages'] = $this->HomeModel->findAll();
+        $data['messages'] = $this->HomeModel->orderBy('id', 'DESC')->findAll();
         return view('admin/message', $data);
     }
 
